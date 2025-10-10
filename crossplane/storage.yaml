@@ -1,0 +1,13 @@
+apiVersion: storage.azure.crossplane.io/v1alpha3
+kind: Account
+metadata:
+  name: crossplane-storage-demo
+spec:
+  forProvider:
+    resourceGroupName: rg-cloudnative
+    location: germanywestcentral
+    sku:
+      name: Standard_LRS
+    kind: StorageV2
+  providerConfigRef:
+    name: default
