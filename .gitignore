@@ -1,0 +1,5 @@
+# Fichiers sensibles
+azure-credentials.json
+*.key
+*.pem
+*.env
