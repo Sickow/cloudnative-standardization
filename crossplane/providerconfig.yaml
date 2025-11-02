@@ -1,11 +1,6 @@
-apiVersion: azure.crossplane.io/v1beta1
-kind: ProviderConfig
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
 metadata:
-  name: default
+  name: crossplane-contrib-provider-azure
 spec:
-  credentials:
-    source: Secret
-    secretRef:
-      namespace: crossplane-system
-      name: azure-secret
-      key: creds
+  package: xpkg.upbound.io/crossplane-contrib/provider-azure:v0.29.0
